@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Payment</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu");
+    img {
+      margin: auto;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    body {
+      background: #2196f3;
+      margin: 0 10px;
+    }
+
+    .payment {
+      background: #f8f8f8;
+      max-width: 360px;
+      margin: 80px auto;
+      height: auto;
+      padding: 35px;
+      padding-top: 70px;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
+
+    .payment h2 {
+      text-align: center;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      color: #0d3c61;
+    }
+
+    .form .label {
+      display: block;
+      color: gray;
+      margin-bottom: 6px;
+    }
+
+    .input {
+      padding: 13px 0px 13px 25px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid #1a9a13;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      word-spacing: 3px;
+      outline: none;
+      font-size: 16px;
+      color: #555555;
+    }
+
+    .card-grp {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-item {
+      width: 48%;
+    }
+
+    .space {
+      margin-bottom: 20px;
+    }
+
+    .icon-relative {
+      position: relative;
+    }
+
+    .icon-relative .fas,
+    .icon-relative .far {
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+      font-size: 20px;
+      color: #555555;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background: #1a9a13;
+      padding: 12px;
+      text-align: center;
+      color: #f8f8f8;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-family: "Ubuntu", sans-serif; 
+      border: none;
+    }
+    .btn:hover {
+      background: rgb(14, 194, 74);
+    }
+    .payment-logo {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      background: #f8f8f8;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      line-height: 85px;
+    }
+
+    .payment-logo:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 90px;
+      height: 90px;
+      background: #2196f3;
+      border-radius: 50%;
+    }
+
+    .payment-logo p {
+      position: relative;
+      color: #f8f8f8;
+      font-family: "Baloo Bhaijaan", cursive;
+      font-size: 58px;
+    }
+
+    @media screen and (max-width: 420px) {
+      .card-grp {
+        flex-direction: column;
+      }
+      .card-item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .btn {
+        margin-top: 20px;
+      }
+    }
+    .navbar {
+      background-color: skyblue;
+      background-repeat: no-repeat;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: auto;
+    }
+    .logo {
+      color: aqua;
+      font-size: 1.5rem;
+      width: 10%;
+      height: 10%;
+    }
+    .menu {
+      display: none;
+      cursor: pointer;
+    }
+    .bar {
+      width: 23px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+    .NAVlinks {
+      transition: 0.8s;
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+    }
+    .NAVlinks a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      transition: 0.8s;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: auto;
+    }
+    @media screen and (max-width: 768px) {
+      .menu {
+        display: block;
+      }
+
+      .NAVlinks {
+        transition: 0.8s;
+        display: none;
+        flex-direction: column;
+        width: 27%;
+        height: 100vh;
+        text-align: center;
+        position: fixed;
+        top: 50px;
+        background-color: skyblue;
+        z-index: 1;
+      }
+      .NAVlinks a {
+        margin: 0;
+      }
+
+      .NAVlinks.show {
+        display: flex;
+        margin-left: 70%;
+      }
+    }
+    #row {
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img
+          width="90%"
+          height="90%"
+          src="https://cdn.dribbble.com/users/2790958/screenshots/6607139/1200x628.png"
+        />
+      </div>
+      <div class="menu" id="menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="NAVlinks" id="NAVlinks">
+        <a href="payment.html">About us</a>
+        <a href="#">Events</a>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="payment">
+        <h2>Payment Portal:</h2>
+       <div class="form" >
+        <img style="margin: auto; display: block;" src="https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif" width="50%">
+        <br/>
+        <br/>
+        <br/>
+        <p style="text-align: center; color: #1a9a13;">Your Transaction went successfully!</p>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  </body>
+  <script>
+    document.getElementById("menu").addEventListener("click", function () {
+      const navLinks = document.getElementById("NAVlinks");
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</html>
