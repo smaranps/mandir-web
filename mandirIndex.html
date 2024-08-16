@@ -78,6 +78,8 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
+      gap: 20px;
+      margin: 0;
       @media screen and (max-width: 768px) {
         flex-direction: column;
       }
@@ -90,16 +92,17 @@
     .card {
       background-image: url(https://www.transparentpng.com/download/scroll/scroll-paper-old-transparent-png-3.png);
       background-color: transparent;
-      width: 238px;
+      width: 300px;
+      font-size: large ;
       background-size: cover;
       padding: 10px;
       text-align: center;
-      height: 343px;
+      height: 400px;
       margin-left: 10%;
       border: none;
       @media screen and (max-width: 768px) {
         margin-top: 5px;
-        margin-left: 20%;
+        margin-left: 0;
       }
     }
     .dropdown {
@@ -273,7 +276,7 @@
       .NAVlinks {
         display: none;
         flex-direction: column;
-        width: 45%;
+        width: 60%;
         height: 100vh;
         text-align: center;
         position: fixed;
@@ -285,7 +288,7 @@
       .NAVlinks.show {
         transition: 2s all ease-in;
         display: flex;
-        margin-left: 60%;
+        margin-left: 40%;
         font-size: small;
       }
     }
@@ -367,6 +370,23 @@
             <a href="#">Volunteer at Baba's Mandir</a>
           </div>
         </div>
+        <div class="dropdown">
+          <button>Daily updates ⌄</button>
+          <div class="content">
+            <a href="#">Our Timings</a>
+            <a href="#">Notice for devotees</a>
+          </div>
+        </div>
+         <a href="#">Subscribe to Newsletter</a>
+        <div style="background-color:#e3e8e5; border-radius: 25px;">
+        <input
+          type="search"
+          placeholder="Search..."
+          style=" background-color:#e3e8e5; border: none; border-top-left-radius: 25px; border-bottom-left-radius: 25px; padding: 10px;"
+        > </input> <button style="background-color: rgb(255, 255, 255); border-top-right-radius: 25px; border-bottom-right-radius: 25px; border: none; padding: 10px;">
+          <i class="fa-solid fa-magnifying-glass fa-l"></i>
+        </button>
+      </div>
       </div>
     </div>
     <br />
@@ -463,11 +483,12 @@
         style="
           background-image: url(https://www.transparentpng.com/download/scroll/scroll-paper-old-transparent-png-3.png);
           background-color: transparent;
-          width: 238px;
+          width: 300px;
           background-size: cover;
           padding: 10px;
           text-align: center;
-          height: 333px;
+          height: 400px;
+          font-size: large;
         "
       >
         <br />
@@ -541,9 +562,11 @@
       >
         <br />
         <br />
-        <h2 style="font-size: x-large; text-align: center">
+        <br/>
+        <h2 style="font-size: x-large; margin-left: 20px;">
           Notice to Devotees
         </h2>
+        <br/>
         <br />
         <marquee
           behavior="scroll"
@@ -587,7 +610,7 @@
     <p>
       The Shirdi Sai Mandir, the Shirdi of North America, is conveniently
       located at 2721 Markham Road in Toronto, ON just north of Finch Road and
-      Markham Road. Baba’s Mandir is spread across 4 units (6,7, 8 and 9) with a
+      Markham Road. <br/> Baba’s Mandir is spread across 4 units (6,7, 8 and 9) with a
       total area of approximately 8,000 square feet.
     </p>
     <br />
@@ -615,7 +638,7 @@
         <div
           class="respNoMarg"
           style="
-            color: black;
+            color: white;
             text-decoration: none;
             margin-left: 20%;
             margin-bottom: 5%;
@@ -625,29 +648,29 @@
           <h2>Quick Links</h2>
           <br />
           <p>Here are a few Quick Links:</p>
-          <a href="#">Online Activities</a>
+          <a style="color: white" href="#">Online Activities</a>
           <br />
           <br />
-          <a href="#">Garlands</a>
+          <a style="color: white" href="#">Garlands</a>
           <br />
           <br />
-          <a href="#">Paduka Booking</a>
+          <a style="color: white" href="#">Paduka Booking</a>
           <br />
           <br />
-          <a href="#">Online Activities</a>
+          <a style="color: white" href="#">Online Activities</a>
           <br />
           <br />
-          <a href="#">Shawl Booking</a>
+          <a style="color: white" href="#">Shawl Booking</a>
           <br />
           <br />
-          <a href="#">Prasad Booking</a>
+          <a style="color: white" href="#">Prasad Booking</a>
           <br />
           <br />
-          <a href="#"
+          <a style="color: white" href="#"
             ><i class="fa-solid fa-circle-dollar-to-slot fa-2xl"></i> Donate</a
           >
         </div>
-        <div style="text-align: center" class="respNoMarg">
+        <div style="text-align: center; color: white" class="respNoMarg">
           <h2>Reach us on:</h2>
           <p><i class="fa-solid fa-phone fa-2xl"></i> Phone number</p>
           <p><i class="fa-solid fa-envelope fa-2xl"></i> Email account</p>
@@ -660,7 +683,10 @@
           <p><i class="fa-solid fa-user fa-2xl"></i> Important Person 3</p>
           <p><i class="fa-solid fa-user fa-2xl"></i> Important Person 4</p>
         </div>
-        <div style="text-align: center; margin-right: 15%" class="respNoMarg">
+        <div
+          style="text-align: center; color: white; margin-right: 15%"
+          class="respNoMarg"
+        >
           <h2>Follow Us:</h2>
           <br />
           <p>You can follow us on:</p>
@@ -674,18 +700,11 @@
           </p>
           <p><i class="fa-brands fa-youtube fa-2xl"></i> @Youtube_channel</p>
           <p>
-            <i
-              style="color: #000000"
-              class="fa-brands fa-app-store-ios fa-2xl"
-            ></i>
+            <i class="fa-brands fa-app-store-ios fa-2xl"></i>
             IOS Application
           </p>
           <p>
-            <i
-              style="color: #000000"
-              class="fa-brands fa-google-play fa-2xl"
-            ></i
-            >Android Application
+            <i class="fa-brands fa-google-play fa-2xl"></i>Android Application
           </p>
           <p>
             <i class="fa-solid fa-location-dot fa-flip-horizontal fa-2xl"></i>
@@ -695,6 +714,13 @@
         <br />
       </div>
     </div>
+    <br />
+    <form >
+      
+      <input type="email" placeholder="email" required style=" border: none; width: 20%; padding: 10px; text-align: center; background-color: #e3e8e5; border-bottom-left-radius: 25px; border-top-left-radius: 25px;"  />
+      <input type="button" value="Subscribe" onclick="myfunction()" style="border: none; padding: 10px; background-color: #ffa500; border-top-right-radius: 25px; border-bottom-right-radius: 25px;"/>
+      <p id="para1"></p>
+    </form>
     <p style="text-align: center">
       Copyright© 2024 The Shirdi Sai Mandir And Cultural Centre. All rights
       reserved
@@ -705,5 +731,9 @@
       const navLinks = document.getElementById("NAVlinks");
       navLinks.classList.toggle("show");
     });
+    function myfunction() {
+      document.getElementById("para1").innerHTML = "Thank you for subscribing!";
+      return false;
+    }
   </script>
 </html>
