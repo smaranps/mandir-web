@@ -76,10 +76,9 @@
     #row {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: center;
-      gap: 20px;
-      margin: 0;
+      margin-right: auto;
       @media screen and (max-width: 768px) {
         flex-direction: column;
       }
@@ -95,10 +94,9 @@
       width: 300px;
       font-size: large ;
       background-size: cover;
-      padding: 10px;
       text-align: center;
       height: 400px;
-      margin-left: 10%;
+      margin-left: 5%;
       border: none;
       @media screen and (max-width: 768px) {
         margin-top: 5px;
@@ -218,7 +216,7 @@
       border-radius: 25px;
       position: relative;
       align-items: center;
-      z-index: 1;
+      z-index: 2;
       @media screen and (max-width: 768px) {
         position: fixed;
         background-color: #ffbc40;
@@ -246,6 +244,7 @@
       display: flex;
       justify-content: end;
       border-radius: 2px;
+      
     }
     .NAVlinks {
       transition: 0.8s ease-out;
